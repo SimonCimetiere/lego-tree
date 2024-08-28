@@ -21,13 +21,11 @@ export default {
     parseParts() {
       parseCSV('dataset/parts.csv').then(d => {
         this.parts = d
-        console.log(d)
       })
     },
     parseInventories() {
       parseCSV('dataset/Inventory.csv').then(d => {
         this.inventories = d
-        console.log(d)
       })
     },
     getInventories(setId){
@@ -37,7 +35,6 @@ export default {
       return this.parts.filter( p => p.part_num === partId)
     },
     toggleShowInventory(set_id) {
-      console.log(this.showSetInventory[set_id])
       this.showSetInventory[set_id] === 'none'? this.showSetInventory[set_id] = 'block' : this.showSetInventory[set_id] = 'none' 
     }
   },
